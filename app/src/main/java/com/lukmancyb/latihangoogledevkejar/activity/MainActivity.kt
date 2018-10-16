@@ -1,8 +1,11 @@
-package com.lukmancyb.latihangoogledevkejar
+package com.lukmancyb.latihangoogledevkejar.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import com.lukmancyb.latihangoogledevkejar.model.Item
+import com.lukmancyb.latihangoogledevkejar.R
+import com.lukmancyb.latihangoogledevkejar.adapter.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.*
 
@@ -16,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initData()
         club_list.layoutManager = LinearLayoutManager(this)
-        club_list.adapter = RecyclerViewAdapter(this, items){
+        club_list.adapter = RecyclerViewAdapter(this, items) {
             startActivity<DetailActivity>("name" to it.name, "image" to it.image, "desc" to it.deskripsi)
         }
     }
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         items.clear()
         for(i in name.indices){
-            items.add(Item(name[i], image.getResourceId(i,0),deskripsi[i]))
+            items.add(Item(name[i], image.getResourceId(i, 0), deskripsi[i]))
         }
         image.recycle()
     }

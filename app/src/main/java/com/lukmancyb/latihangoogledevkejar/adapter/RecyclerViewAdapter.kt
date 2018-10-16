@@ -1,4 +1,4 @@
-package com.lukmancyb.latihangoogledevkejar
+package com.lukmancyb.latihangoogledevkejar.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.lukmancyb.latihangoogledevkejar.model.Item
+import com.lukmancyb.latihangoogledevkejar.R
 import kotlinx.android.synthetic.main.item_list.view.*
 
 
-class RecyclerViewAdapter(private val context: Context, private val items: List<Item>,private  val listener: (Item) -> Unit)
+class RecyclerViewAdapter(private val context: Context, private val items: List<Item>, private  val listener: (Item) -> Unit)
     : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

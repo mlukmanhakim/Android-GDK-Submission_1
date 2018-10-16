@@ -10,5 +10,5 @@
     app:layout_constraintBottom_toTopOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintLeft_toRightOf="parent"
-    tools:context="com.lukmancyb.latihangoogledevkejar.MainActivity"/>
+    tools:context="com.lukmancyb.latihangoogledevkejar.activity.MainActivity"/>
 

@@ -1,4 +1,4 @@
-package com.lukmancyb.latihangoogledevkejar
+package com.lukmancyb.latihangoogledevkejar.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
